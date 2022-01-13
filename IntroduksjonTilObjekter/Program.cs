@@ -6,6 +6,29 @@ namespace IntroduksjonTilObjekter
     {
         static void Main(string[] args)
         {
+            var counter = new Counter(1000);
+            while (true)
+            {
+                Console.Clear();
+                //counter.Show();
+                Console.WriteLine(counter.Count);
+                var keyInfo = Console.ReadKey();
+                if (keyInfo.KeyChar == '+')
+                {
+                    counter.Click();
+                }
+                //else if (keyInfo.KeyChar == 'b')
+                //{
+                //    counter.Count *= 2;
+                //}
+                else if (keyInfo.KeyChar == 'r')
+                {
+                    counter.Reset();
+                }
+            }
+        }
+        static void Demo2(string[] args)
+        {
 
             var s = "Terje";
             /*
@@ -34,7 +57,7 @@ namespace IntroduksjonTilObjekter
                 Email = "per@mail.com",
                 HasConfirmedEmail = true
             };
-            users[1] =  new Person
+            users[1] = new Person
             {
                 Name = "Pål",
                 Age = 19,
@@ -65,7 +88,7 @@ namespace IntroduksjonTilObjekter
                 }
             };
         }
-        
+
         static void Demo1()
         {
             /*
