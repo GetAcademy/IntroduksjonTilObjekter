@@ -6,6 +6,45 @@ namespace IntroduksjonTilObjekter
     {
         static void Main(string[] args)
         {
+            HippieCounter.StartValue = 7;
+
+            var a = new HippieCounter();
+            Console.WriteLine("a=+"+a.Count);
+            a.Click();
+            Console.WriteLine("a=+" + a.Count);
+            a.Click();
+            Console.WriteLine("a=+" + a.Count);
+            a.Reset();
+            Console.WriteLine("a=+" + a.Count);
+            a.Click();
+            Console.WriteLine("a=+" + a.Count);
+
+
+            var b = new HippieCounter();
+            Console.WriteLine("b=+" + b.Count);
+            b.Click();
+            Console.WriteLine("b=+" + b.Count);
+            b.Click();
+            Console.WriteLine("b=+" + b.Count);
+
+            HippieCounter.StartValue = 10000;
+
+
+            b.Reset();
+            Console.WriteLine("b=+" + b.Count);
+
+            a.Click();
+            Console.WriteLine("a=+" + a.Count);
+            a.Click();
+            Console.WriteLine("a=+" + a.Count);
+            a.Reset();
+            Console.WriteLine("a=+" + a.Count);
+        }
+
+
+        static void Demo3()
+        {
+
             var counter = new Counter(1000);
             while (true)
             {
